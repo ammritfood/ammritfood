@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="cssfiles/mainstyle.css">
+    <link rel="stylesheet" href="cssfiles/contactus.css ">
+    <link rel="stylesheet" href="cssfiles/owl.carousel.css">
+    <link rel="stylesheet" href="cssfiles/owl.theme.green.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jsfiles/jquery.min.js"></script>
+    <script src="jsfiles/owl.carousel.min.js"></script>
+    <title>AmmritFood</title>
+</head>
+
+<body>
+
+    <section class="contactdone ">
+        <div class="mydatacontent">
+            <h2>Contact Us</h2>
+
+        </div>
+        <div class="datacontainer">
+            <div class="contactinfo">
+                <div class="mybox">
+                    <div class="myicon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="mytext">
+                        <h3>Ammrit Food</h3>
+                        <p>44-A,Saipuram Colony,Morti,<br> Rajnagar Extension <br>Ghaziabad(U.P.) <br>201017</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="mybox">
+                    <div class="myicon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="mytext">
+                        <h3>Phone</h3>
+                        <p>+91-9654092016</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="mybox">
+                    <div class="myicon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="mytext">
+                        <h3>Email</h3>
+                        <p style="font-size: 12px;">ammritfood@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactformdata">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <input type="text" name="" id="formGroupExampleInput" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="" id="formGroupExampleInput2" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="number" name="" id="formGroupExampleInput3" required>
+                        <span>Phone</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" id="formGroupExampleInput4" required>
+                        <span>Message</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="button" name="" id="" value="Submit" onclick="mynewfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- enquiry pulse -->
+    <!-- <div class="centerwala">
+    <a href="tel:9654092016"> <img src="images/enqu.png" alt="" class="pulsewala"> </a>
+</div> -->
+    <!-- whatsapp enquiry -->
+    <!-- <div class="centerwalatwo">
+    <a href="https://wa.me/919654092016"> <img src="images/finalwhatsap.png " alt="Shiva photocopy rdc" class="pulsewalatwo"></a>
+</div> -->
+    <!-- script for form -->
+    <script>
+        function mynewfun() {
+            var nam = document.getElementById('formGroupExampleInput').value;
+            var emaildata = document.getElementById('formGroupExampleInput2').value;
+            var phon = document.getElementById('formGroupExampleInput3').value;
+            var msg = document.getElementById('formGroupExampleInput4').value;
+            //   var result = 'http://slanzmails.herokuapp.com//sendmail?gmailId=' + 'agranshkri@gmail.com' + '&data=<h1>Name</h1>&rdurl=https://google.com';
+            var result = `http://slanzmails.herokuapp.com/sendmail?gmailId=ammritfood@gmail.com&data=<p style="color:green;font-size:15px;font-weight:800;">Hii AmmritFood!! You have new enquiry</p><h1>Name : ${nam}</h1> <h1>Email :${emaildata}</h1> <h1>Phone :${phon}</h1> <h1>Message :${msg}</h1> &rdurl=https://agranshupy.github.io/amritfoodtesting/querydone.html`;
+            window.location.href = result;
+            console.log('testing');
+
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
